@@ -1,0 +1,175 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fa;
+  color: #232323;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e2eafc;
+  background: #e2eafc;
+  flex-shrink: 0;
+}
+
+header {
+  background: #232f3e;
+  color: #fff;
+  padding: 1.4rem 0;
+}
+
+header h1 {
+  margin: 0 0 0.4rem 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #86a8e7;
+}
+
+.section {
+  margin-bottom: 2.2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #232f3e;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.skills-list li {
+  background: #e2eafc;
+  padding: 0.6rem 1.1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.portfolio-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(60,70,100,0.08);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.portfolio-img {
+  width: 60px;
+  height: 60px;
+  background: #e7eaf6;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #bfc6d0;
+  border-radius: 3px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button {
+  background: #232f3e;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #42516b;
+}
+
+footer {
+  background: #f0f3fa;
+  color: #888;
+  font-size: 0.97rem;
+  text-align: center;
+  padding: 1.1rem 0;
+  border-top: 1px solid #e2eafc;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main {
+    padding: 0.5rem 0;
+  }
+  .container {
+    padding: 0 0.7rem;
+  }
+}
