@@ -11,11 +11,12 @@
     <div class="container header-flex">
       <img src="profile.jpg" alt="Profile photo" class="profile-photo"/>
       <div>
-        <h1>Fadhil Akbar Cariearsa<nav>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+        <h1>Fadhil Akbar Cariearsa</h1>
+        <nav>
+          <a href="#about" class="nav-link-min">About</a>
+          <a href="#skills" class="nav-link-min">Skills</a>
+          <a href="#portfolio" class="nav-link-min">Portfolio</a>
+          <a href="#contact" class="nav-link-min">Contact</a>
         </nav>
       </div>
     </div>
@@ -24,20 +25,21 @@
     <section id="about" class="container section">
       <h2>About Me</h2>
       <p>
-        I am an outstanding high school student and am passionate about technology and English. Welcome to my portfolio!
+        I am an outstanding high school student who is passionate about technology and English.<br>
+        Welcome to my professional portfolio.
       </p>
     </section>
     <section id="skills" class="container section">
       <h2>Skills</h2>
       <ul class="skills-list">
-        <li>HTML & CSS</li>
+        <li>HTML &amp; CSS</li>
         <li>JavaScript</li>
-        <li>modeling and design</li>
+        <li>Modeling and Design</li>
         <li>Public Communication</li>
-        <li>Social contact</li>
-        <li>Administration and analysis</li>
-        <li>Python & Lua</li>
-        <li>Idea generation</li>
+        <li>Social Contact</li>
+        <li>Administration &amp; Analysis</li>
+        <li>Python &amp; Lua</li>
+        <li>Idea Generation</li>
       </ul>
     </section>
     <section id="portfolio" class="container section">
@@ -55,7 +57,7 @@
     </section>
     <section id="contact" class="container section">
       <h2>Contact</h2>
-      <form>
+      <form autocomplete="off" spellcheck="false">
         <label for="name">Name</label>
         <input type="text" id="name" required>
 
@@ -65,14 +67,18 @@
         <label for="message">Message</label>
         <textarea id="message" required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit" class="nav-link-min">Send</button>
       </form>
     </section>
   </main>
   <footer>
     <div class="container">
-      &copy; FADHIL AKBAR CARIEARSA
+      &copy; <span id="year"></span> FADHIL AKBAR CARIEARSA
     </div>
   </footer>
+  <script>
+    // Set current year in footer for professionalism & zero-lag
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
