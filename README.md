@@ -1,2 +1,2 @@
-My Portfolio (in-development)
-GitHub pages website
+using Github Pages Website
+( In-Development ) Thanks
