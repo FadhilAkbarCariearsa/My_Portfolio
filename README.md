@@ -1,2 +1,3 @@
 using Github Pages Website
-( In-Development ) Thanks
+( In-Development )
+created using HTML and CSS
