@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>Fadhil Akbar Cariearsa | Portfolio</title>
+  <link rel="preload" href="style.css" as="style"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
     <div class="container header-flex">
-      <img src="profile.jpg" alt="Profile photo" class="profile-photo"/>
+      <div class="profile-photo profile-placeholder">FA</div>
       <div>
         <h1>Fadhil Akbar Cariearsa</h1>
         <nav>
@@ -35,7 +36,7 @@
         <li>HTML &amp; CSS</li>
         <li>JavaScript</li>
         <li>Modeling and Design</li>
-        <li>SQL &amp; Database/li>
+        <li>SQL &amp; Database</li>
         <li>Basic Kotlin</li>
         <li>Administration &amp; Analysis</li>
         <li>Python &amp; Lua</li>
@@ -47,7 +48,7 @@
       <div class="portfolio-grid">
         <div class="portfolio-item">
           <div class="portfolio-img">
-            <img src="project1-logo.png" alt="Project 1" />
+            🌐
           </div>
           <div class="portfolio-content">
             <div class="portfolio-header">
@@ -59,7 +60,7 @@
         </div>
         <div class="portfolio-item">
           <div class="portfolio-img">
-            <img src="project2-logo.png" alt="Project 2" />
+            📝
           </div>
           <div class="portfolio-content">
             <div class="portfolio-header">
@@ -71,7 +72,7 @@
         </div>
         <div class="portfolio-item">
           <div class="portfolio-img">
-            <img src="project3-logo.png" alt="Project 3" />
+            📊
           </div>
           <div class="portfolio-content">
             <div class="portfolio-header">
@@ -83,7 +84,7 @@
         </div>
         <div class="portfolio-item">
           <div class="portfolio-img">
-            <img src="project4-logo.png" alt="Project 4" />
+            🤖
           </div>
           <div class="portfolio-content">
             <div class="portfolio-header">
@@ -95,7 +96,7 @@
         </div>
         <div class="portfolio-item">
           <div class="portfolio-img">
-            <img src="project5-logo.png" alt="Project 5" />
+            🎮
           </div>
           <div class="portfolio-content">
             <div class="portfolio-header">
@@ -109,18 +110,17 @@
     </section>
     <section id="contact" class="container section">
       <h2>Contact</h2>
-      <form autocomplete="off" spellcheck="false">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
-
-        <button type="submit" class="nav-link-min">Send Message</button>
-      </form>
+      <div class="contact-content">
+        <p style="margin-bottom: 1.5rem; color: #666;">Ready to connect? Click the button below to send me an email directly through Gmail.</p>
+        <a href="mailto:fadhilakbarcariearsaindonesia@gmail.com?subject=Portfolio Contact Message&body=Hi Fadhil,%0A%0AI found your portfolio and would like to get in touch.%0A%0A[Your message here]%0A%0ABest regards," 
+           class="nav-link-min" 
+           style="display: inline-block; background: #1c2230; text-decoration: none;">
+          📧 Send Email via Gmail
+        </a>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+          Email: <strong>fadhilakbarcariearsaindonesia@gmail.com</strong>
+        </p>
+      </div>
     </section>
   </main>
   <footer>
