@@ -1,2 +1,2 @@
 # https://fadhilakbarcariearsa.github.io/My_Portfolio/
-# In-Development
+# Still being maintained and updated using Github pages.
