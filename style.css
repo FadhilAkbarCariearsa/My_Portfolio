@@ -4,6 +4,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -11,14 +13,17 @@ html {
   padding: 0;
 }
 body {
-  font-family: system-ui, 'Segoe UI', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: linear-gradient(135deg, #f7f9fa 0%, #e8f4f8 50%, #f0f8ff 100%);
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: #232323;
   min-height: 100vh;
   line-height: 1.6;
-  font-display: swap;
   padding-top: 90px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Layout helpers */
@@ -39,37 +44,61 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  will-change: transform;
 }
 .header-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 1.5rem;
 }
 .profile-photo {
   width: 60px;
   height: 60px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #e2eafc;
   background: #e2eafc;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(60,70,100,0.15);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .profile-placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-weight: 700;
   color: #1c2230;
   background: linear-gradient(135deg, #86a8e7 0%, #91c9ff 50%, #e2eafc 100%);
 }
 .profile-photo:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05) translateZ(0);
+  transform: scale(1.05) translateZ(0);
 }
 header h1 {
   margin-bottom: 0.5rem;
@@ -85,14 +114,18 @@ header h1 {
   padding: 0.35rem 0.8rem;
   border-radius: 1.2rem;
   font-weight: 500;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   white-space: nowrap;
   border: 1px solid rgba(255,255,255,0.1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .nav-link-min:hover {
   background: linear-gradient(135deg, #e2eafc 0%, #91c9ff 100%);
   color: #1c2230;
-  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px) translateZ(0);
+  transform: translateY(-1px) translateZ(0);
   box-shadow: 0 2px 8px rgba(134,168,231,0.3);
 }
 
@@ -123,7 +156,10 @@ h2::after {
 
 /* Skills */
 .skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
@@ -134,11 +170,15 @@ h2::after {
   border-radius: 1.5rem;
   font-size: 0.85rem;
   font-weight: 500;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 1px solid rgba(134,168,231,0.2);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .skills-list li:hover {
-  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px) translateZ(0);
+  transform: translateY(-1px) translateZ(0);
   background: linear-gradient(135deg, #86a8e7 0%, #91c9ff 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(134,168,231,0.3);
@@ -146,7 +186,9 @@ h2::after {
 
 /* Portfolio */
 .portfolio-grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
@@ -156,14 +198,22 @@ h2::after {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(60,70,100,0.08);
   padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0.8rem;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 1px solid rgba(134,168,231,0.1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .portfolio-item:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px) translateZ(0);
+  transform: translateY(-2px) translateZ(0);
   box-shadow: 0 6px 20px rgba(60,70,100,0.15);
   background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
 }
@@ -172,26 +222,36 @@ h2::after {
   height: 48px;
   background: linear-gradient(135deg, #e7eaf6 0%, #f0f8ff 100%);
   border-radius: 6px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border: 1px solid rgba(134,168,231,0.2);
-}
-.portfolio-img {
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .portfolio-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   min-width: 0;
 }
 .portfolio-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0.3rem;
   gap: 0.8rem;
@@ -231,12 +291,18 @@ input, textarea {
   border-radius: 6px;
   font-size: 0.95rem;
   background: #fff;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 input:focus, textarea:focus {
   border-color: #86a8e7;
   outline: none;
   box-shadow: 0 0 0 3px rgba(134,168,231,0.1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 textarea {
   resize: vertical;
